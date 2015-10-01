@@ -40,8 +40,8 @@ endif()
 
 #set(CMAKE_BUILD_TYPE RELEASE)
 
-add_subdirectory("third_party/SDL2-2.0.3")
-include_directories("third_party/SDL2-2.0.3/include")
+#add_subdirectory("third_party/SDL2-2.0.3")
+#include_directories("third_party/SDL2-2.0.3/include")
 
 #set(CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE_BACKUP})
 

@@ -10,7 +10,12 @@ int main(int argc, char * argv[])
 //    return 1;
 //  }
 
-  std::cout << "Hello World!";
+  std::vector<int> vec = {1,2,3};
+
+  for( auto x : vec){
+    std::cout << x;
+  }
+  std::cout << " Hello World!" << std::endl;
 
   return 0;
 }

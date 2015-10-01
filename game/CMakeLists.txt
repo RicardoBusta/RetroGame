@@ -24,7 +24,13 @@ set(SOURCES
 set(HEADERS
 )
 
+message(STATUS "Adding ${ROOT_SOURCE_DIR}/third_party/SDL2-2.0.3/include")
+
+include_directories("${ROOT_SOURCE_DIR}/third_party/SDL2-2.0.3/include")
+
 add_executable(${PROJECT_NAME} "${SOURCES} ${HEADERS}")
-target_link_libraries(${PROJECT_NAME} SDL2main SDL2)
+#target_link_libraries(${PROJECT_NAME} SDL2main SDL2)
+
+target_link_libraries(${PROJECT_NAME} "${ROOT_SOURCE_DIR}/third_party/SDL2-2.0.3/lib/x64/SDL2main.lib" "${ROOT_SOURCE_DIR}/third_party/SDL2-2.0.3/lib/x64/SDL2.lib")
 
 #install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
