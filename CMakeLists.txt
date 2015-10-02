@@ -1,4 +1,4 @@
-#   RetroGameSDL by Ricardo Bustamante de Queiroz (ricardo@busta.com.br)       #
+#   RetroGame by Ricardo Bustamante de Queiroz (ricardo@busta.com.br)          #
 #   Copyright (C) {year}  {name of author}                                     #
 #                                                                              #
 #   This program is free software: you can redistribute it and/or modify       #
@@ -33,25 +33,7 @@ elseif (${CMAKE_CXX_COMPILER_ID} STREQUAL "MSVC")
   endif()
 endif()
 
-#set(SDL_STATIC OFF)
-#set(SDL_SHARED ON)
-
-#set(CMAKE_BUILD_TYPE_BACKUP ${CMAKE_BUILD_TYPE})
-
-#set(CMAKE_BUILD_TYPE RELEASE)
-
-add_subdirectory("third_party/SFML")
+add_definitions( -DSFML_STATIC )
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/third_party/SFML/include")
-#add_subdirectory("third_party/SDL2-2.0.3")
-#include_directories("third_party/SDL2-2.0.3/include")
-
-#set(CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE_BACKUP})
-
-#set(SDL2_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/third_party/SDL2-2.0.3/lib/x64")
-#set(SDL2_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party/SDL2-2.0.3/include")
-#set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules")
-#find_package(SDL2 REQUIRED)
-#message(STATUS "SDL2_FOUND ${SDL2_FOUND}")
-#include_directories(${SDL2_INCLUDE_DIR})
-
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third_party/SFML")
 add_subdirectory("game")

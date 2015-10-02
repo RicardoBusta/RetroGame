@@ -12,11 +12,6 @@ int main(int argc, char * argv[])
 
   sf::Window window(sf::VideoMode(800, 600), "My window");
 
-  std::vector<int> vec = {1,2,3};
-
-  for( auto x : vec){
-    std::cout << x;
-  }
   std::cout << " Hello World!" << std::endl;
 
   return 0;
