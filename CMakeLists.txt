@@ -40,6 +40,8 @@ endif()
 
 #set(CMAKE_BUILD_TYPE RELEASE)
 
+add_subdirectory("third_party/SFML")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/third_party/SFML/include")
 #add_subdirectory("third_party/SDL2-2.0.3")
 #include_directories("third_party/SDL2-2.0.3/include")
 
